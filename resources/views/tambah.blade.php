@@ -42,33 +42,48 @@
 
     <!-- Konten -->
 <div class="container" style="margin-top: 100px;">
-  <div class="d-flex justify-content-between align-items-center mb-2">
-    <h2 style="font-weight: bold; margin-left: 120px;">Halaman Produk</h2>
-    <a class="btn btn-primary me-5" href="/tambah">Tambah Produk</a>
+  <div class="d-flex justify-content-between align-items-center mb-1">
+    <h2 style="font-weight: bold; margin-left: 120px;">Form Tambah Produk</h2>
   </div>
 
-  <table class="table table-sm table-hover table-primary table-bordered text-center align-middle">
-    <thead class="table-primary">
-      <tr>
-        <th>KODE</th>
-        <th>Nama Produk</th>
-        <th>Jenis Produk</th>
-        <th>Harga</th>
-      </tr>
-    </thead>
-    <tbody>
-      @for ($i = 0; $i < $jumlah; $i++)
-      <tr>
-        <td>{{ $kode[$i] }}</td>
-        <td>{{ $nama[$i] }}</td>
-        <td>Alat Tulis</td>
-        <td>{{ $harga[$i] }}</td>
-      </tr>
-      @endfor
-    </tbody>
-  </table>
+    </div>
+    <div class=" container col-sm-12">
+        <form action="" method="GET">
+<div class="row">
+  <div class="col-sm-4">
+    <label for="">Kode</label>
+    <input type="number" name="npm" class="form-control" placeholder="Input Kode Produk">
+  </div>
+  <div class="col-sm-4">
+    <label for="">Nama Produk</label>
+    <input type="text" name="nama_mahasiswa" class="form-control" placeholder="Input Nama Produk">
+  </div>
+
+
+  <div class="col-sm-4">
+    <label for="">Jenis Produk</label>
+    <select name="Jenis Produk" class="form-select" >
+      <option value="">Alat Tulis</option>
+      <option value="">Elektronik</option>
+      <option value="">Sembako</option>
+    </select>
+  </div>
 </div>
 
+<div class="row">
+  <div class="col-sm-6">
+    <label for="">Harga</label>
+    <input type="number" name="npm" class="form-control" placeholder="Input Harga Produk">
+  </div>
+  <div class="col-sm-6 mt-4">
+    <button class="btn btn-success" style="width: 100%" type="submit">Simpan</button>
+  </div>
+  </div>
+
+        </form>
+    </div>
+   </div>
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>

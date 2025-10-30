@@ -14,3 +14,7 @@ Route::get('/produk', function () {
     $jumlah = count($kode);
     return view('produk', compact('kode', 'nama', 'jenis', 'harga', 'jumlah'));
 });
+
+Route::get('/tambah', function () {
+    return view('tambah');
+});
